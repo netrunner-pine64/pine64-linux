@@ -23,5 +23,6 @@ override_dh_auto_install: build_dtb
 	$(MAKE) V=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
 
 build_dtb:
+	mkdir -p debian/tmp/boot/
 	dtc debian/sun50i-a64-pine64.dts -o debian/tmp/boot/sun50i-a64-pine64.dtb
 	dtc debian/sun50i-a64-pine64-plus.dts -o debian/tmp/boot/sun50i-a64-pine64-plus.dtb
