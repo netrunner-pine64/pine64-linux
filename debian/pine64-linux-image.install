@@ -1,5 +1,5 @@
 arch/arm64/boot/Image  /boot/
-arch/arm64/boot/dts/sun50iw1p1-soc.dtb /boot/
 lib/modules/*
 boot/System.map*
 boot/config*
+boot/*.dtb
