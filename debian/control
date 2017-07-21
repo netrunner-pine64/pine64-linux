@@ -2,9 +2,9 @@ Source: pine64-linux
 Section: kernel
 Priority: optional
 Maintainer: Rohan Garg <rohan@kde.org>
-Build-Depends: debhelper (>=9), build-essential, bc, lzop, u-boot-tools, device-tree-compiler
+Build-Depends: debhelper (>=9)
 Standards-Version: 3.9.8
-Homepage: https://github.com/hardkernel/linux/tree/odroidc-3.10.y
+Homepage: https://github.com/ayufan-pine64/linux-build/releases
 
 Package: pine64-linux-image
 Architecture: arm64
