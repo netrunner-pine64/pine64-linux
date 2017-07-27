@@ -2,10 +2,9 @@
 # https://github.com/igorpecovnik/lib/blob/master/config/bootscripts/boot-pine64-default.cmd
 # https://github.com/longsleep/u-boot-pine64/blob/55c9c8c8ac005b1c00ac948386c60c4a741ebaa9/include/configs/sun50iw1p1.h#L339
 
-# set_cmdline
-setenv bootargs "console=${console} enforcing=${enforcing} cma=${cma} ${optargs} androidboot.serialno=${sunxi_serial} androidboot.hardware=${hardware} androidboot.selinux=${selinux} earlyprintk=sunxi-uart,0x01c28000 loglevel=8 root=${root} eth0_speed=${eth0_speed}"
-
+run set_cmdline
 run load_dtb
+
 
 # set display resolution from uEnv.txt or other environment file
 # default to 1080p30
@@ -160,24 +159,4 @@ else
 	fdt rm /soc@01c00000/sdmmc@01c0f000/
 fi
 
-if test "${boot_filename}" = ""; then
-	# boot regular kernel
-	if fatload mmc ${boot_part} ${initrd_addr} recovery.txt; then
-		echo Using recovery...
-		setenv initrd_filename "${recovery_initrd_filename}"
-	fi
-	echo "Loading kernel and initrd..."
-	run load_kernel load_initrd boot_kernel
-else
-	# check if recovery.txt is created and load recovery image
-	if fatload mmc ${boot_part} ${initrd_addr} recovery.txt; then
-		echo Loading recovery...
-		fatload mmc ${boot_part} ${initrd_addr} ${recovery_filename}
-	else
-		echo Loading normal boot...
-		fatload mmc ${boot_part} ${initrd_addr} ${boot_filename}
-	fi
-
-	# boot android image
-	boota ${initrd_addr}
-fi
+run load_kernel load_initrd boot_kernel
