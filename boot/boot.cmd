@@ -5,6 +5,9 @@
 run set_cmdline
 run load_dtb
 
+load mmc ${boot_part} ${load_addr} ${bootlogo}
+
+sunxi_bmp_show ${load_addr}
 
 # set display resolution from uEnv.txt or other environment file
 # default to 1080p30
@@ -159,4 +162,5 @@ else
 	fdt rm /soc@01c00000/sdmmc@01c0f000/
 fi
 
-run load_kernel load_initrd boot_kernel
+run load_kernel
+run boot_kernel
