@@ -1,4 +1,4 @@
-boot
-lib
-etc
-var
+arch/arm64/boot/Image  /boot/
+lib/modules/*
+boot/System.map*
+boot/config*

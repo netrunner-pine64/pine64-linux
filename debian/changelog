@@ -1,5 +1,5 @@
-pine64-linux (3.10) UNRELEASED; urgency=medium
+pine64-linux (3.10-1) unstable; urgency=medium
 
-  * Initial release
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 
  -- Rohan Garg <rohan@kde.org>  Tue, 31 May 2016 22:31:58 +0200

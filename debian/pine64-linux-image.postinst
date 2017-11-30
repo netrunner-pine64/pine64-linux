@@ -1,9 +1,0 @@
-#!/bin/sh
-# postinst script for pine64-linux-image
-
-set -e
-
-case "$1" in
-    configure)
-        mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
-esac
