@@ -9,7 +9,7 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	dh_auto_build -- V=1 Image modules
-	LICHEE_KDIR=$(CURDIR) LICHEE_PLATFORM=Pine64 make -C $(CURDIR)/modules/gpu build
+	$(MAKE) M=modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali CONFIG_MALI400=m CONFIG_MALI450=y CONFIG_MALI400_PROFILING=y CONFIG_MALI_DMA_BUF_MAP_ON_ATTACH=y CONFIG_MALI_DT=y EXTRA_DEFINES="-DCONFIG_MALI400=1 -DCONFIG_MALI450=1 -DCONFIG_MALI400_PROFILING=1 -DCONFIG_MALI_DMA_BUF_MAP_ON_ATTACH -DCONFIG_MALI_DT"
 
 override_dh_auto_clean:
 	$(MAKE) clean
