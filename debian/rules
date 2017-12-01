@@ -13,12 +13,8 @@ override_dh_auto_build:
 override_dh_auto_clean:
 	$(MAKE) clean CONFIG_ARCH_SUN50IW1P1=y
 
-KERNEL_VERSION := $(shell cat $(CURDIR)/include/config/kernel.release)
-
 override_dh_auto_install:
 	mkdir -p debian/tmp/boot/
 	INSTALL_PATH=debian/tmp/boot/ dh_auto_install
 	$(MAKE) V=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install firmware_install
-	mkdir -p debian/tmp/lib/modules/$(KERNEL_VERSION)/kernel/extramodules/
-	cp -v $(CURDIR)/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali.ko debian/tmp/lib/modules/$(KERNEL_VERSION)/kernel/extramodules
-	depmod -b debian/tmp $(KERNEL_VERSION)
+	$(MAKE) M=modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali CONFIG_MALI400=m CONFIG_MALI450=y CONFIG_MALI400_PROFILING=y CONFIG_MALI_DMA_BUF_MAP_ON_ATTACH=y CONFIG_MALI_DT=y EXTRA_DEFINES="-DCONFIG_MALI400=1 -DCONFIG_MALI450=1 -DCONFIG_MALI400_PROFILING=1 -DCONFIG_MALI_DMA_BUF_MAP_ON_ATTACH -DCONFIG_MALI_DT" modules_install INSTALL_MOD_PATH=debian/tmp/
