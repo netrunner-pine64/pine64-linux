@@ -22,3 +22,4 @@ override_dh_auto_install:
 	$(MAKE) V=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install firmware_install
 	mkdir -p debian/tmp/lib/modules/$(KERNEL_VERSION)/kernel/extramodules/
 	cp -v $(CURDIR)/modules/gpu/mali400/kernel_mode/driver/src/devicedrv/mali/mali.ko debian/tmp/lib/modules/$(KERNEL_VERSION)/kernel/extramodules
+	depmod -b debian/tmp $(KERNEL_VERSION)

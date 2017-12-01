@@ -2,7 +2,7 @@ Source: pine64-linux
 Section: kernel
 Priority: optional
 Maintainer: Rohan Garg <rohan@kde.org>
-Build-Depends: bc, build-essential, debhelper (>= 9), lzop, u-boot-tools
+Build-Depends: bc, build-essential, debhelper (>= 9), kmod, lzop, u-boot-tools
 Standards-Version: 3.9.8
 Homepage: https://github.com/hardkernel/linux/tree/odroidc-3.10.y
 Vcs-Git: https://github.com/netrunner-pine64/pine64-linux
@@ -14,4 +14,3 @@ Depends: pine64-uboot, ${misc:Depends}, ${shlibs:Depends}
 Description: kernel package for the Pine64
  This package contains the nececssary kernel bits to boot
  a Pine64
-

@@ -1,6 +1,5 @@
 arch/arm64/boot/Image  /boot/
 boot/System.map*
 boot/config*
-lib/modules/*
 lib/firmware/*
-
+lib/modules/*
