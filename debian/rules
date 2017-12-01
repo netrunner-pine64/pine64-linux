@@ -15,4 +15,4 @@ override_dh_auto_clean:
 override_dh_auto_install:
 	mkdir -p debian/tmp/boot/
 	INSTALL_PATH=debian/tmp/boot/ dh_auto_install
-	$(MAKE) V=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
+	$(MAKE) V=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install firmware_install
