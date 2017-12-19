@@ -44,6 +44,8 @@ kernel/drivers/video/sunxi/disp2/hdmi/hdmi_cec.ko
 kernel/drivers/char/raw.ko
 kernel/drivers/char/ppdev.ko
 kernel/drivers/char/timer_test/sunxi_timer_test.ko
+kernel/drivers/gpu/drm/drm_kms_helper.ko
+kernel/drivers/gpu/drm/sunxi/sunxidrm.ko
 kernel/drivers/block/nbd.ko
 kernel/drivers/block/cryptoloop.ko
 kernel/drivers/misc/eeprom/eeprom_93cx6.ko
