@@ -1,5 +1,9 @@
 #!/usr/bin/make -f
 
 %:
-	dh $@ --parallel
+	dh $@ --parallel --with systemd
 
+override_dh_installinit:
+	dh_installinit
+	dh_systemd_enable --name=on-suspend
+	dh_systemd_enable --name=on-resume
