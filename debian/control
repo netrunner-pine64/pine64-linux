@@ -8,7 +8,7 @@ Homepage: https://github.com/ayufan-pine64/linux-build/releases
 
 Package: pine64-linux-image
 Architecture: arm64
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: kernel package for the ODROID pine64
  This package contains the nececssary kernel bits to boot
  a pine64
