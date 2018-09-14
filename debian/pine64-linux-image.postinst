@@ -7,3 +7,6 @@ case "$1" in
     configure)
         mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
 esac
+
+#DEBHELPER#
+
