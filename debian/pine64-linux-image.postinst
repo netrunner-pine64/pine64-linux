@@ -6,6 +6,7 @@ set -e
 case "$1" in
     configure)
         mkimage -C none -A arm -T script -d /boot/boot.cmd /boot/boot.scr
+        update-alternatives --install /boot/uEnv.txt pine64-linux-uenv /boot/uEnv-768p.txt 50
 esac
 
 #DEBHELPER#
