@@ -211,6 +211,7 @@ alias symbol:cci_unlock vfe_io
 alias symbol:p54_parse_eeprom p54common
 alias symbol:mwifiex_cancel_hs mwifiex
 alias symbol:usb_ep_autoconfig libcomposite
+alias symbol:__tracepoint_mali_hw_counter mali
 alias symbol:os_clk_put vfe_io
 alias symbol:usbnet_set_msglevel usbnet
 alias symbol:videobuf_queue_cancel videobuf_core
@@ -401,6 +402,7 @@ alias symbol:sensor_write_array vfe_io
 alias symbol:cfg80211_wext_giwscan cfg80211
 alias symbol:ieee80211_data_from_8023 cfg80211
 alias symbol:ieee80211_get_buffered_bc mac80211
+alias symbol:mali_dev_pause mali
 alias symbol:parport_ieee1284_read_byte parport
 alias symbol:bt_sock_reclassify_lock bluetooth
 alias symbol:mwifiex_add_card mwifiex
@@ -422,6 +424,7 @@ alias symbol:nf_conntrack_in nf_conntrack
 alias symbol:fscache_object_lookup_negative fscache
 alias symbol:ssb_clockspeed ssb
 alias symbol:ieee80211_rts_get mac80211
+alias symbol:_mali_profiling_get_mali_version mali
 alias symbol:ath9k_hw_kill_interrupts ath9k_hw
 alias symbol:usb_function_unregister libcomposite
 alias symbol:wlcore_event_soft_gemini_sense wlcore
@@ -574,6 +577,8 @@ alias symbol:dm_bitset_del dm_persistent_data
 alias symbol:wl1271_acx_set_ht_capabilities wlcore
 alias symbol:rt2800_disable_radio rt2800lib
 alias symbol:rt2x00queue_start_queues rt2x00lib
+alias symbol:mali_set_user_setting mali
+alias symbol:_mali_profiling_get_api_version mali
 alias symbol:xt_proto_init x_tables
 alias symbol:brcmu_pktq_penq_head brcmutil
 alias symbol:lirc_dev_fop_ioctl lirc_dev
@@ -595,6 +600,7 @@ alias symbol:async_xor async_xor
 alias symbol:nf_ct_remove_expectations nf_conntrack
 alias symbol:ath_regd_init ath
 alias symbol:ieee80211_tx_status_irqsafe mac80211
+alias symbol:_mali_profiling_set_event mali
 alias symbol:fscache_enqueue_operation fscache
 alias symbol:__lbtf_cmd libertas_tf
 alias symbol:xt_request_find_target x_tables
@@ -794,6 +800,7 @@ alias symbol:ip_vs_proto_data_get ip_vs
 alias symbol:rt2x00usb_flush_queue rt2x00usb
 alias symbol:usbnet_unlink_rx_urbs usbnet
 alias symbol:hostap_check_sta_fw_version hostap
+alias symbol:mali_perf_set_num_pp_cores mali
 alias symbol:rt2x00queue_stop_queue rt2x00lib
 alias symbol:iscsi_tcp_conn_teardown libiscsi_tcp
 alias symbol:xt_recseq x_tables
@@ -1181,6 +1188,7 @@ alias symbol:disp_sys_clk_get_rate disp
 alias symbol:ath_key_config ath
 alias symbol:usbnet_get_drvinfo usbnet
 alias symbol:ieee80211_sta_set_buffered mac80211
+alias symbol:__tracepoint_mali_timeline_event mali
 alias symbol:dm_requeue_unmapped_request dm_mod
 alias symbol:gf128mul_lle gf128mul
 alias symbol:parport_ieee1284_read_nibble parport
@@ -1268,6 +1276,7 @@ alias symbol:cfg80211_send_rx_auth cfg80211
 alias symbol:rt2x00queue_get_entry rt2x00lib
 alias symbol:iscsi_itt_to_ctask libiscsi
 alias symbol:gsl_DataInit gslX680new
+alias symbol:mali_dev_resume mali
 alias symbol:dm_table_get_size dm_mod
 alias symbol:md_raid5_congested raid456
 alias symbol:ip6t_register_table ip6_tables
@@ -1421,12 +1430,14 @@ alias symbol:gator_annotate_channel gator
 alias symbol:_rtl92c_phy_init_bb_rf_register_definition rtl8192c_common
 alias symbol:ath9k_hw_setopmode ath9k_hw
 alias symbol:rtl92c_dm_bt_coexist rtl8192c_common
+alias symbol:_mali_profiling_get_l2_counters mali
 alias symbol:cfg80211_michael_mic_failure cfg80211
 alias symbol:__ieee80211_get_radio_led_name mac80211
 alias symbol:iscsi_tcp_recv_segment_is_hdr libiscsi_tcp
 alias symbol:rt2800_set_rts_threshold rt2800lib
 alias symbol:v4l2_m2m_get_vq v4l2_mem2mem
 alias symbol:dm_bufio_get_client dm_bufio
+alias symbol:gpu_thermal_cool mali
 alias symbol:iscsi_create_flashnode_sess scsi_transport_iscsi
 alias symbol:rt2x00queue_unpause_queue rt2x00lib
 alias symbol:__fscache_invalidate fscache
@@ -1572,6 +1583,7 @@ alias symbol:nfnl_unlock nfnetlink
 alias symbol:brcmu_pktq_mlen brcmutil
 alias symbol:soc_camera_host_unregister soc_camera
 alias symbol:rtl_ps_disable_nic rtlwifi
+alias symbol:__tracepoint_mali_sw_counters mali
 alias symbol:cci_write_a8_d8 vfe_io
 alias symbol:cfg80211_inform_bss_frame cfg80211
 alias symbol:btmrvl_add_card btmrvl
@@ -1627,6 +1639,7 @@ alias symbol:rtl92c_set_fw_pwrmode_cmd rtl8192c_common
 alias symbol:rtl_usb_suspend rtlwifi
 alias symbol:v4l2_m2m_streamoff v4l2_mem2mem
 alias symbol:dm_bufio_issue_flush dm_bufio
+alias symbol:mali_get_user_setting mali
 alias symbol:rt2x00mac_sw_scan_complete rt2x00lib
 alias symbol:ar9003_mci_get_interrupt ath9k_hw
 alias symbol:vb2_get_contig_userptr videobuf2_memops
@@ -1638,6 +1651,7 @@ alias symbol:videobuf_alloc_vb videobuf_core
 alias symbol:rt2x00usb_disable_radio rt2x00usb
 alias symbol:nf_connlabels_replace nf_conntrack
 alias symbol:parport_negotiate parport
+alias symbol:_mali_profiling_control mali
 alias symbol:cfg80211_find_vendor_ie cfg80211
 alias symbol:hci_register_cb bluetooth
 alias symbol:rtl_get_tcb_desc rtlwifi

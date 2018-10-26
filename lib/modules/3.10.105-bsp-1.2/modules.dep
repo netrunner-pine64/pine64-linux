@@ -671,3 +671,4 @@ kernel/lib/raid6/raid6_pq.ko:
 kernel/lib/ts_kmp.ko:
 kernel/lib/ts_bm.ko:
 kernel/lib/ts_fsm.ko:
+kernel/extramodules/mali.ko:
